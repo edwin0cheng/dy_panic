@@ -1,0 +1,4 @@
+/target/
+some_dy/target/
+some_staticlib/target/
+**/*.rs.bk
