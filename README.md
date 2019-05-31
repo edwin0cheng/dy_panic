@@ -28,9 +28,9 @@ In src/main.rs:
 
 * call `some_staticlib::get_global_direct()`  (static linkage)
 * call `some_dy::get_global_var_from_dy` (dynamic linkgage)
-  * in some_dy , call `some_staticlib::get_global_var_from_dy()` (static linkage)
+  * in some_dy , call `some_staticlib::get_global_var_from_dy()` (static linkage with some_dy)
 * call `some_dy::get_global_var_direct` (dynamic linkgage)
-  * in some_dy , call `some_staticlib::get_global_var_direct()` (static linkage)
+  * in some_dy , call `some_staticlib::get_global_var_direct()` (static linkage with some_dy)
   
 Note that although `some_dy::get_global_var_from_dy` and `some_dy::get_global_var_direct` are wrapped in dynamic library, the dynamic linker is smart enough to know that the underneath `some_staticlib::get_global_var_direct()` can be shared.
   
